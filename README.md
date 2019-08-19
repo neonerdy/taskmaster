@@ -5,6 +5,7 @@ Simple and intuitive web based task management for software development
 
 ![Alt text](https://github.com/neonerdy/taskmaster/blob/master/dashboard.JPG, "Dashboard")
 
+
 ## HOW TO DEPLOY
 
 1. git clone https://github.com/neonerdy/taskmaster
