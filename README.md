@@ -10,8 +10,7 @@ Simple and intuitive web based task management for software development
 ![Alt text](https://github.com/neonerdy/taskmaster/blob/master/task.JPG "Task")
 
 ![Alt text](https://github.com/neonerdy/taskmaster/blob/master/task_detail.JPG "Task Detail")
-
-![Alt text](https://github.com/neonerdy/taskmaster/blob/master/task_detail2.JPG "Attachment")
+![Alt text](https://github.com/neonerdy/taskmaster/blob/master/attachment.JPG "Attachment")
 
 
 
