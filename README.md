@@ -17,10 +17,9 @@ Simple and intuitive web based task management for software development
 
 
 
-## HOW TO DEPLOY
+## HOW TO RUN
 
 1. git clone https://github.com/neonerdy/taskmaster
-2. cd taskmaster
 3. npm install
 4. npm run
 5. cd taskmaster/public/api
