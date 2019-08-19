@@ -1,5 +1,19 @@
+/*--------------------------------------------------
+ *
+ *  Task Master
+ * 
+ *  Task Manager For Software Development
+ * 
+ *  Version : 1.0
+ *  Author  : Ariyanto
+ *  E-mail  : neonerdy@gmail.com
+ * 
+ *  © 2019, Under Apache Licence  
+ * 
+ *--------------------------------------------------
+ */
 
-import React, {Component} from 'react';
+ import React, {Component} from 'react';
 import './App.css';
 import { Header } from './Header';
 import { NavBar } from './NavBar';
