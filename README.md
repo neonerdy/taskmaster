@@ -1,6 +1,9 @@
 # TASK MASTER
 
-Simple and intuitive eeb based task management for software development
+Simple and intuitive web based task management for software development
+
+
+![Alt text](https://github.com/neonerdy/moneycare/blob/master/dashboard.JPG, "Dashboard")
 
 ## HOW TO DEPLOY
 
