@@ -3,7 +3,7 @@
 Simple and intuitive web based task management for software development
 
 
-![Alt text](https://github.com/neonerdy/moneycare/blob/master/moneycare-small.jpg "MoneyCare")
+![Alt text](https://github.com/neonerdy/taskmaster/blob/master/dashboard.JPG "MoneyCare")
 
 
 ## HOW TO DEPLOY
