@@ -382,7 +382,7 @@ export class File extends Component
             iconColor = 'brown';
         }
       
-        if (file.type.toLowerCase() == 'pdf') {
+        if (file.type.toLowerCase() == 'jpg' || file.type.toLowerCase() == "jpeg" || file.type.toLowerCase() == 'png' || file.type.toLowerCase() == 'pdf') {
             return (
                 <a href="#!" onClick={()=>this.openNewTab(fileName)}>
                     <i class={fileIcon} style={{color: iconColor}}></i>&nbsp; {file.fileName}

@@ -133,7 +133,7 @@ CREATE TABLE public.projects
     initial character varying(10) COLLATE pg_catalog."default",
     project_manager_id uuid,
     created_date timestamp without time zone,
-    status character varying(10) COLLATE pg_catalog."default",
+    status character varying(15) COLLATE pg_catalog."default",
     description character varying(250) COLLATE pg_catalog."default",
     CONSTRAINT projects_pkey PRIMARY KEY (id)
 )

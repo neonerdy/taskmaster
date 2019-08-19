@@ -261,7 +261,7 @@ export class EditProject extends Component
                                                     onChange={this.onValueChange} value={this.state.status}>
                                                     <option key="" value="">Select Status</option>
                                                     <option key="New" value="New">New</option>
-                                                    <option key="On Progress" value="On Progress">On Progress</option>
+                                                    <option key="In Progress" value="In Progress">In Progress</option>
                                                     <option key="Closed" value="Closed">Closed</option>
                                                 </select>
                                             </div>
