@@ -1,0 +1,218 @@
+-- Table: public.attachments
+
+-- DROP TABLE public.attachments;
+
+CREATE TABLE public.attachments
+(
+    id uuid NOT NULL,
+    task_id uuid,
+    file_name character varying(50) COLLATE pg_catalog."default",
+    type character varying(15) COLLATE pg_catalog."default",
+    size numeric,
+    uploaded_date timestamp without time zone,
+    CONSTRAINT attachments_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.attachments
+    OWNER to postgres;
+
+
+
+-- Table: public.comments
+
+-- DROP TABLE public.comments;
+
+CREATE TABLE public.comments
+(
+    id uuid NOT NULL,
+    task_id uuid,
+    created_date timestamp without time zone,
+    commenter_id uuid,
+    message character varying(500) COLLATE pg_catalog."default",
+    CONSTRAINT comments_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.comments
+    OWNER to postgres;
+
+
+
+-- Table: public.files
+
+-- DROP TABLE public.files;
+
+CREATE TABLE public.files
+(
+    id uuid NOT NULL,
+    project_id uuid,
+    file_name character varying(150) COLLATE pg_catalog."default",
+    type character varying(10) COLLATE pg_catalog."default",
+    size character varying(50) COLLATE pg_catalog."default",
+    uploader_id uuid,
+    uploaded_date timestamp without time zone,
+    CONSTRAINT files_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.files
+    OWNER to postgres;
+
+
+
+-- Table: public.histories
+
+-- DROP TABLE public.histories;
+
+CREATE TABLE public.histories
+(
+    id uuid NOT NULL,
+    task_id uuid,
+    user_id uuid,
+    date timestamp without time zone,
+    activity_log character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT histories_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.histories
+    OWNER to postgres;
+
+
+
+-- Table: public.people
+
+-- DROP TABLE public.people;
+
+CREATE TABLE public.people
+(
+    id uuid NOT NULL,
+    user_name character varying(25) COLLATE pg_catalog."default",
+    password character varying(25) COLLATE pg_catalog."default",
+    full_name character varying(25) COLLATE pg_catalog."default",
+    role character varying(15) COLLATE pg_catalog."default",
+    address character varying(150) COLLATE pg_catalog."default",
+    phone character varying(15) COLLATE pg_catalog."default",
+    email character varying(25) COLLATE pg_catalog."default",
+    active_project_id uuid,
+    "Is_hide_closed_task" boolean,
+    photo character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT people_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.people
+    OWNER to postgres;
+
+
+
+-- Table: public.projects
+
+-- DROP TABLE public.projects;
+
+CREATE TABLE public.projects
+(
+    id uuid NOT NULL,
+    project_name character varying(25) COLLATE pg_catalog."default",
+    initial character varying(10) COLLATE pg_catalog."default",
+    project_manager_id uuid,
+    created_date timestamp without time zone,
+    status character varying(10) COLLATE pg_catalog."default",
+    description character varying(250) COLLATE pg_catalog."default",
+    CONSTRAINT projects_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.projects
+    OWNER to postgres;
+
+
+
+-- Table: public.tasks
+
+-- DROP TABLE public.tasks;
+
+CREATE TABLE public.tasks
+(
+    id uuid NOT NULL,
+    project_id uuid,
+    category character varying(10) COLLATE pg_catalog."default",
+    tracker character varying(25) COLLATE pg_catalog."default",
+    title character varying(250) COLLATE pg_catalog."default",
+    priority character varying(10) COLLATE pg_catalog."default",
+    reporter_id uuid,
+    assignee_id uuid,
+    tester_id uuid,
+    platform character varying(25) COLLATE pg_catalog."default",
+    module character varying(25) COLLATE pg_catalog."default",
+    version character varying(10) COLLATE pg_catalog."default",
+    created_date timestamp without time zone,
+    modified_date timestamp without time zone,
+    closed_date timestamp without time zone,
+    status character varying(15) COLLATE pg_catalog."default",
+    description text COLLATE pg_catalog."default",
+    estimation integer,
+    estimation_unit character varying(10) COLLATE pg_catalog."default",
+    estimation_in_hour integer,
+    total_time_spent_in_hour integer,
+    CONSTRAINT bugs_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tasks
+    OWNER to postgres;
+
+
+
+-- Table: public.worklogs
+
+-- DROP TABLE public.worklogs;
+
+CREATE TABLE public.worklogs
+(
+    id uuid NOT NULL,
+    task_id uuid,
+    user_id uuid,
+    logged_date timestamp without time zone,
+    time_spent integer,
+    unit character varying(10) COLLATE pg_catalog."default",
+    time_spent_in_hour integer,
+    CONSTRAINT worklogs_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.worklogs
+    OWNER to postgres;
+
+
+
+INSERT INTO people VALUES ('00000000-0000-0000-0000-000000000000','admin','admin','Administrator','Admin','','','','00000000-0000-0000-0000-000000000000','false','')
+
+
+
+
