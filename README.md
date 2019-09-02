@@ -21,8 +21,8 @@ Simple and intuitive web based task management for software development
 
 1. git clone https://github.com/neonerdy/taskmaster
 3. npm install
-4. npm run
-5. cd taskmaster/public/api
+4. npm start
+5. cd public/api
 6. dotnet restore
 7. dotnet run
 
